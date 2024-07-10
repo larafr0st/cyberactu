@@ -38,7 +38,7 @@ def gen_html_filename(website):
     Return 'html_filename' """
     html_filename = f"output_{website['site_name']}.html"
     if website['response'].status_code != 200:
-        html_filename = f"corrupted_output_{site_name[1]}.html"
+        html_filename = f"corrupted_output_{website['site_name']}.html"
     return html_filename
 
 def write_to_html_file(website):
