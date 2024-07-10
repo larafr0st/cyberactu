@@ -15,3 +15,8 @@ new crap version
 > Keep html content into .html file  
 > Keep cleaned data into sqlite .db file  
 > Log file  
+
+
+
+
+Eternal cursed <3 to Fred for the support 
