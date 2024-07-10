@@ -1,7 +1,15 @@
 # cyberactu  
 
 ***WIPed and wicked***  
-news & featured articles from maintream US cybersec medias
+news & featured articles from maintream US cybersec medias  
+> it-pro  
+> darkreading
+> the hacker news
+> hackread
+> gbhackers
+> talos intelligence
+
+  
 
 /!\ Disclaimer /!\  
 Intended for personal/educational use only  
