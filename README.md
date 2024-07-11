@@ -4,14 +4,6 @@
 ***WIPed and wicked***    
 news & featured articles from maintream cybersec medias  
   
-> it-pro  
-> darkreading  
-> the hacker news  
-> hackread  
-> gbhackers  
-> talos intelligence  
-
-  
 
 /!\ Disclaimer /!\  
 Intended for personal/educational use only  
