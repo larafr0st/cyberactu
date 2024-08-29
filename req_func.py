@@ -3,7 +3,7 @@ import sqlite3
 from datetime import datetime
 from bs4 import BeautifulSoup
 from lxml import etree
-
+        
 def get_response_content(website):
     """ Send GET request to the website url (with headers set),
     add response object content into website dictionary with 'response'
@@ -77,12 +77,20 @@ def format_date(site):
         'bleepingcomputer': '%B %d, %Y',
         'hackread': '%B %d, %Y',
         'gbhackers': '%B %d, %Y',
-        'talosintelligence': '%B %d, %Y %H:%M'
+        'talosintelligence': '%B %d, %Y %H:%M',
+        'cybersecuritynews': '%B %d, %Y',
+        'securitymagazine': '%B %d, %Y',
+        'trendmicro': '%B %d, %Y',
+        'theregister': '%d %b %H:%M',
+        'helpnetsecurity': '%B %d, %Y'
     }
     if site['site_name'] in date_formats:
         format_str = date_formats[site['site_name']]
         site['times'] = [datetime.strptime(date, format_str).strftime('%Y-%m-%d') for date in site['times']]
-
+        if any('1900' in element for element in site['times']):
+            current_year = str(datetime.today().year)
+            site['times'] = [element.replace('1900', current_year) for element in site['times']]
+        
 def format_link(site):
     """ Format link to complete url if the link doesn't start 
     with http """
