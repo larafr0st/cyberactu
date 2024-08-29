@@ -66,6 +66,12 @@ helpnetsecurity = {
     'xpreq_time': '//div[@class="card-body border-bottom-1 mb-3"]//time/text()',
     'xpreq_link': '//div[@class="card-body border-bottom-1 mb-3"]//a/@href'
     }
+bleepingcomputer = {
+    'url':'https://www.bleepingcomputer.com',
+    'xpreq_title':'//*[@class="bc_latest_news_text"]//h4/a/text()',
+    'xpreq_time':'//*[@class="bc_latest_news_text"]//*[@class="bc_news_date"]/text()',
+    'xpreq_link':'//*[@class="bc_latest_news_text"]//h4/a/@href'
+}
 listing = [
     itpro, 
     darkreading, 
@@ -77,7 +83,8 @@ listing = [
     secmag,
     trendmicro,
     theregister,
-    helpnetsecurity
+    helpnetsecurity,
+    bleepingcomputer
 ]
 
 for site in listing:
