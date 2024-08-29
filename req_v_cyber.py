@@ -38,9 +38,9 @@ talosintelligence = {
     }
 cybersecuritynews = {
     'url':'https://www.cybersecuritynews.com',
-    'xpreq_title':'//div[@id="tdi_21"]//div[@class="item-details"]//a/@title',
-    'xpreq_time':'//div[@id="tdi_21"]//div[@class="item-details"]//div[@class="td-module-meta-info"]//span[@class="td-post-date"]//time/text()',
-    'xpreq_link':'//div[@id="tdi_21"]//div[@class="item-details"]//a/@href'
+    'xpreq_title':'//div[@id="tdi_20"]//div[@class="item-details"]//a/@title',
+    'xpreq_time':'//div[@id="tdi_20"]//div[@class="item-details"]//div[@class="td-module-meta-info"]//span[@class="td-post-date"]//time/text()',
+    'xpreq_link':'//div[@id="tdi_20"]//div[@class="item-details"]//a/@href'
     }
 secmag = {
     'url':'https://www.securitymagazine.com/topics/2236-cybersecurity-news',
