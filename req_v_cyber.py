@@ -60,12 +60,6 @@ theregister = {
     'xpreq_time':'//div[@class="headlines"]//article//a[@class="story_link"]//div[@class="time_comments"]//span[@class="time_stamp"]/@title',
     'xpreq_link':'//div[@class="headlines"]//article//a[@class="story_link"]/@href'
     }
-cyberscoop = {
-    'url':'https://www.cyberscoop.com/',
-    'xpreq_title': '//div[@class="latest-posts__items"]',
-    'xpreq_time': '//div[@class="latest-posts__items"]',
-    'xpreq_link' : '//div[@class="latest-posts__items"]'
-    }
 helpnetsecurity = {
     'url': 'https://www.helpnetsecurity.com/',
     'xpreq_title': '//div[@class="card-body border-bottom-1 mb-3"]//a/@title',
