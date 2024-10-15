@@ -84,9 +84,20 @@ def format_date(site):
         'theregister': '%d %b %H:%M',
         'helpnetsecurity': '%B %d, %Y'
     }
+
+    #imagine what could happen if a date is not a date anymore 
     if site['site_name'] in date_formats:
         format_str = date_formats[site['site_name']]
-        site['times'] = [datetime.strptime(date, format_str).strftime('%Y-%m-%d') for date in site['times']]
+        for i, date in enumerate(site['times']):
+            try:
+                fmt_date = datetime.strptime(date, format_str).strftime('%Y-%m-%d')
+                site['times'][i] = fmt_date
+            except ValueError:
+                year = str(datetime.today().year)
+                month = str(datetime.today().month)
+                day = str(datetime.today().day)
+                replacement_date = ''.join(year + '-' + month + '-' + day)
+                site['times'][i] = replacement_date
         if any('1900' in element for element in site['times']):
             current_year = str(datetime.today().year)
             site['times'] = [element.replace('1900', current_year) for element in site['times']]
