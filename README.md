@@ -27,7 +27,7 @@ I understand, but I hate. By the way, it's a cool way to learn about
 cloudfare's anti-bot measures.
 
 **Wtf are those generated output files**  
-Yeah there are useless at the end. 
+Yeah they are useless at the end. 
 
 **Code is bad**  
 But I-T W-O-R-K-S. Some parts of the code are overcomplicated for
