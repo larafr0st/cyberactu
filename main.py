@@ -215,14 +215,20 @@ def send_data(data):
 
 for site in websites:
     content = get_content(site, headers)
-    send_content_file(site, content)
-    items_list = parsing_data(site)
-    cleaning_date(items_list)
-    # [x] There was a ValueError for darkreading, and the exception was correctly
-    # raised, the message was displayed. The data were send to the database and
-    # correctly retrieved but, not in the correct format ! 
-    # solution : format date list check
-    send_data(items_list)
-    # for each in items_list:
-        # print(each)
+    # what could go wrong if timeout ?
+    # TypeError: write() argument must be str, not None
+    # [x] add condition to check if there is content
+    if content is not None:
+        send_content_file(site, content)
+        items_list = parsing_data(site)
+        cleaning_date(items_list)
+        # [x] There was a ValueError for darkreading, and the exception was correctly
+        # raised, the message was displayed. The data were send to the database and
+        # correctly retrieved but, not in the correct format ! 
+        # solution : format date list check
+        send_data(items_list)
+        # for each in items_list:
+            # print(each)
+    else:
+        print(f"[ FAIL ] Data not gathered for {site['name']}")
         
