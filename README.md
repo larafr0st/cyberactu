@@ -81,7 +81,7 @@ imports third-party library.
 *[...] and imports third-party library*  
 I need more time to work on this explanation, I'm still hallucinating about it.
 In its current state, there is no issue with Requests because most part of
-the time, even though it is a built-in member, it is already installed
+the time, even though it is not a built-in member, it is already installed
 in some linux distro, as system package. 
 
 #### Modules Usage & Security Considerations
